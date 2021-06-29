@@ -15,19 +15,19 @@ $q1=mysqli_fetch_array($query);
 $sess=$q1["SESSION"];
 $se=$_SESSION["SESSIONid"];
 if( $sid == $se || $sess==$sid || $sess==$se || 1==1){
-echo"</div class=\"hat\"><h1>GET READY FOR QUIZ<h1></div>";
-setcookie("time", 0, time() + (86400 * 30), "/");
-$questionquery="select * from questions2 where Tid='$tid'";
-$questionarr=mysqli_query($db,$questionquery);
-$q=mysqli_fetch_array($questionarr);
-if($q["TIME"]<=0){
-$_COOKIE["time"]=300000;
-}else{
-$_COOKIE["time"]=$q["TIME"]*1000;	
-}
-$qpass = $q["Tpwd"];
-echo"<link rel = \"stylesheet\" href = \"styles.css\">";
-echo"<p id=\"timer\" height=\"100px\" font-size=\"100px\"></P>";
+   echo"</div class=\"hat\"><h1>GET READY FOR QUIZ<h1></div>";
+   setcookie("time", 0, time() + (86400 * 30), "/");
+   $questionquery="select * from questions2 where Tid='$tid'";
+   $questionarr=mysqli_query($db,$questionquery);
+   $q=mysqli_fetch_array($questionarr);
+   if($q["TIME"]<=0){
+      $_COOKIE["time"]=300000;
+   }else{
+      $_COOKIE["time"]=$q["TIME"]*1000;	
+   }
+   $qpass = $q["Tpwd"];
+   echo"<link rel = \"stylesheet\" href = \"styles.css\">";
+   echo"<p id=\"timer\" height=\"100px\" font-size=\"100px\"></P>";
 echo"<script>
 var button = document.getElementById(\"something\");
 var form = document.getElementById(\"form\");

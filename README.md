@@ -3,7 +3,7 @@
 <h4>Blank Quiz interface image</h4>
 <img src="https://raw.githubusercontent.com/Bikram-ghuku/quizerwebsite/main/assests/quiz_interface.png">
 
-<h5>Features</h5>
+<h1>Features</h1>
 <ul>
 	<li>User authentication</li>
 	<li>Unlimited attempts, only 1st attempt uploaded</li>
